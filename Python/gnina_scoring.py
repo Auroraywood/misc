@@ -1,22 +1,11 @@
 #!/usr/bin/env python3
+'''
+Description: train gnina
+Script: train_gnina.py
+@Author: zdx
+1st version: Apr 29, 2019
+'''
 
-#######################################################
-#                                                     
-#Project: cnnscore                                  
-#Script: cnnscore.py                                   
-#
-#Description: To predict binding probability from given 
-#             receptor and given ligand pose(s)
-#
-#Reference: None
-#                                                      
-#1st version: Apr 19, 2019                           
-#Author: Zhou dixin @ DeepDrug                                    
-#                                                        
-#2nd version: To_be_entered_here                      
-#Author: To_be_entered_here                           
-#
-####################################################### 
 import os
 import sys
 from os import listdir
@@ -61,20 +50,22 @@ def main(task_folder,
             score = c[s:e] # CNNscore
         cnnscore.append(score)
     # cnnscore = list(range(20))
-    data = {'ID':ligand_name,'cnnscore':cnnscore}  
+    data = {'#ID':ligand_name,'cnnscore':cnnscore}  
     df = DataFrame(data)
     df =  df.sort_values(by='cnnscore', ascending=False)
-    f_t = "/home/zdx/{0}_score".format(cmpd_lib)
+    path = "{0}/scoring_gnina".format(task_folder)
+    if not os.path.exists(path):
+       call(['mkdir', path])
+    f_t = "{0}/scoring_gnina/{1}.gnina.tsv".format(task_folder, cmpd_lib)
     df.to_csv(f_t, sep='\t', index=False, encoding='utf-8')
-    
-#    with open('active_score', 'r') as f:
+
         
 if __name__=="__main__":
     argv = sys.argv[1:]
     task_folder = argv[0]
     cmpd_lib = argv[1]
     main(task_folder, cmpd_lib)
-   
+
     
     
     
