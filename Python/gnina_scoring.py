@@ -5,7 +5,6 @@ Created on Apr 29, 2019
 Description: Predict with gnina.
 Usage: python3 to_gnina.py /home/zdx/
 '''
-
 import os
 import sys
 from os import listdir
@@ -65,16 +64,3 @@ if __name__=="__main__":
     task_folder = argv[0]
     cmpd_lib = argv[1]
     main(task_folder, cmpd_lib)
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
