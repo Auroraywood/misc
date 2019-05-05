@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 '''
-Description: train gnina
-Script: train_gnina.py
-@Author: zdx
-1st version: Apr 29, 2019
+Created on Apr 29, 2019
+@author: zdx
+Description: Predict with gnina.
+Usage: python3 to_gnina.py /home/zdx/
 '''
 
 import os
