@@ -3,7 +3,7 @@
 Created on Wed May  8 16:02:43 2019
 @author: zdx
 Description: Predict multiple datasets with gnina.
-Usage: python3 gnina_scoring.py /home/zdx/Documents/asfvtk_virtual_screening
+Usage: python3 multi_gnina_scoring.py /home/zdx/Documents/asfvtk_virtual_screening
 '''
 
 import os
