@@ -3,7 +3,7 @@
 Created on Apr 29, 2019
 @author: zdx
 Description: Predict with gnina.
-Usage: python3 gnina_scoring.py task_folder cmpd_lib
+Usage: python3 gnina_scoring.py /home/zdx/Documents/topoII active
 '''
 import os
 import sys
